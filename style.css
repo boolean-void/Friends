@@ -14,6 +14,47 @@ body {
   font-family: "Inter", sans-serif;
   color: white;
 }
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: rgb(255,255,255);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: red;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  scroll-snap-type: y  mandatory;
+}
+
+.card .card1{
+  width: 45%;
+  margin: 10px;
+}
+
+.image-box {
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+}
+
+@media(max-width:600px) {
+  .card,.card1 {
+    width: 100%;
+  }
+}
+
 /*card*/
 
 .card {
@@ -21,7 +62,8 @@ body {
   aspect-ratio: 1 / 0.7;
   border-radius: 8px;
   position: relative;
-  cursor: pointer;
+  cursor: auto;
+  scroll-snap-align: centre;
 }
 
 .card .image-box {
@@ -137,7 +179,8 @@ body {
   aspect-ratio: 1 / 1;
   border-radius: 8px;
   position: relative;
-  cursor: pointer;
+  cursor: auto;
+  scroll-snap-align: centre;
 }
 
 .card1 .image-box {
